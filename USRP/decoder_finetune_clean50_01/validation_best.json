@@ -1,0 +1,791 @@
+{
+  "epoch": 4,
+  "selection_mse": 0.00280666458695325,
+  "summary": [
+    {
+      "loss_model": "clean",
+      "residual_loss_rate": 0.0,
+      "count": 10,
+      "mean_psnr_db": 36.37232944149521,
+      "mean_ssim": 0.9366274890223169
+    },
+    {
+      "loss_model": "independent",
+      "residual_loss_rate": 0.05,
+      "count": 10,
+      "mean_psnr_db": 31.86247051361582,
+      "mean_ssim": 0.9121959103254571
+    },
+    {
+      "loss_model": "independent",
+      "residual_loss_rate": 0.1,
+      "count": 10,
+      "mean_psnr_db": 29.583806480442604,
+      "mean_ssim": 0.8821692620989756
+    },
+    {
+      "loss_model": "independent",
+      "residual_loss_rate": 0.2,
+      "count": 10,
+      "mean_psnr_db": 26.984206903937327,
+      "mean_ssim": 0.8256759232740087
+    },
+    {
+      "loss_model": "independent",
+      "residual_loss_rate": 0.3,
+      "count": 10,
+      "mean_psnr_db": 23.920078778921898,
+      "mean_ssim": 0.771124439047522
+    },
+    {
+      "loss_model": "burst",
+      "residual_loss_rate": 0.05,
+      "count": 10,
+      "mean_psnr_db": 32.82578538149578,
+      "mean_ssim": 0.9216952197625871
+    },
+    {
+      "loss_model": "burst",
+      "residual_loss_rate": 0.1,
+      "count": 10,
+      "mean_psnr_db": 27.672040451685024,
+      "mean_ssim": 0.8529800616822427
+    },
+    {
+      "loss_model": "burst",
+      "residual_loss_rate": 0.2,
+      "count": 10,
+      "mean_psnr_db": 27.150927180214445,
+      "mean_ssim": 0.8115872808666234
+    },
+    {
+      "loss_model": "burst",
+      "residual_loss_rate": 0.3,
+      "count": 10,
+      "mean_psnr_db": 23.503496922082366,
+      "mean_ssim": 0.7431863163812112
+    }
+  ],
+  "per_image": [
+    {
+      "image": "0839.png",
+      "loss_model": "clean",
+      "residual_loss_rate": 0.0,
+      "mse": 0.00022778217680752277,
+      "psnr_db": 36.42480261016223,
+      "ssim": 0.9385086075007144
+    },
+    {
+      "image": "0839.png",
+      "loss_model": "independent",
+      "residual_loss_rate": 0.05,
+      "mse": 0.00036715270834974945,
+      "psnr_db": 34.35153263814568,
+      "ssim": 0.9233468248603455
+    },
+    {
+      "image": "0839.png",
+      "loss_model": "independent",
+      "residual_loss_rate": 0.1,
+      "mse": 0.0010213264031335711,
+      "psnr_db": 29.908354406498205,
+      "ssim": 0.8669338451539087
+    },
+    {
+      "image": "0839.png",
+      "loss_model": "independent",
+      "residual_loss_rate": 0.2,
+      "mse": 0.0013115558540448546,
+      "psnr_db": 28.8221320977286,
+      "ssim": 0.8364740122100581
+    },
+    {
+      "image": "0839.png",
+      "loss_model": "independent",
+      "residual_loss_rate": 0.3,
+      "mse": 0.0018965865019708872,
+      "psnr_db": 27.220273446448672,
+      "ssim": 0.786576768050253
+    },
+    {
+      "image": "0839.png",
+      "loss_model": "burst",
+      "residual_loss_rate": 0.05,
+      "mse": 0.00022778217680752277,
+      "psnr_db": 36.42480261016223,
+      "ssim": 0.9385086075007144
+    },
+    {
+      "image": "0839.png",
+      "loss_model": "burst",
+      "residual_loss_rate": 0.1,
+      "mse": 0.0006949898670427501,
+      "psnr_db": 31.580215273803894,
+      "ssim": 0.8896888663242063
+    },
+    {
+      "image": "0839.png",
+      "loss_model": "burst",
+      "residual_loss_rate": 0.2,
+      "mse": 0.00022778217680752277,
+      "psnr_db": 36.42480261016223,
+      "ssim": 0.9385086075007144
+    },
+    {
+      "image": "0839.png",
+      "loss_model": "burst",
+      "residual_loss_rate": 0.3,
+      "mse": 0.003674550447613001,
+      "psnr_db": 24.34795785848749,
+      "ssim": 0.7018777874743499
+    },
+    {
+      "image": "0807.png",
+      "loss_model": "clean",
+      "residual_loss_rate": 0.0,
+      "mse": 0.002249710261821747,
+      "psnr_db": 26.47873410686211,
+      "ssim": 0.745477401130083
+    },
+    {
+      "image": "0807.png",
+      "loss_model": "independent",
+      "residual_loss_rate": 0.05,
+      "mse": 0.002676862059161067,
+      "psnr_db": 25.72374007777833,
+      "ssim": 0.7324845680008026
+    },
+    {
+      "image": "0807.png",
+      "loss_model": "independent",
+      "residual_loss_rate": 0.1,
+      "mse": 0.002785968128591776,
+      "psnr_db": 25.550238562020393,
+      "ssim": 0.7265667972028215
+    },
+    {
+      "image": "0807.png",
+      "loss_model": "independent",
+      "residual_loss_rate": 0.2,
+      "mse": 0.006436333060264587,
+      "psnr_db": 21.913614905996567,
+      "ssim": 0.6228576492819089
+    },
+    {
+      "image": "0807.png",
+      "loss_model": "independent",
+      "residual_loss_rate": 0.3,
+      "mse": 0.009868091903626919,
+      "psnr_db": 20.057668144871073,
+      "ssim": 0.5548719851979094
+    },
+    {
+      "image": "0807.png",
+      "loss_model": "burst",
+      "residual_loss_rate": 0.05,
+      "mse": 0.002249710261821747,
+      "psnr_db": 26.47873410686211,
+      "ssim": 0.745477401130083
+    },
+    {
+      "image": "0807.png",
+      "loss_model": "burst",
+      "residual_loss_rate": 0.1,
+      "mse": 0.0060503180138766766,
+      "psnr_db": 22.18221797571983,
+      "ssim": 0.6796276783794412
+    },
+    {
+      "image": "0807.png",
+      "loss_model": "burst",
+      "residual_loss_rate": 0.2,
+      "mse": 0.020138666033744812,
+      "psnr_db": 16.95969300086796,
+      "ssim": 0.4971774279261527
+    },
+    {
+      "image": "0807.png",
+      "loss_model": "burst",
+      "residual_loss_rate": 0.3,
+      "mse": 0.015977974981069565,
+      "psnr_db": 17.964782632119586,
+      "ssim": 0.512059293412768
+    },
+    {
+      "image": "0878.png",
+      "loss_model": "clean",
+      "residual_loss_rate": 0.0,
+      "mse": 0.0001497360208304599,
+      "psnr_db": 38.24673712241343,
+      "ssim": 0.9738844550662611
+    },
+    {
+      "image": "0878.png",
+      "loss_model": "independent",
+      "residual_loss_rate": 0.05,
+      "mse": 0.0006014509126543999,
+      "psnr_db": 32.20799811770935,
+      "ssim": 0.9580705426133121
+    },
+    {
+      "image": "0878.png",
+      "loss_model": "independent",
+      "residual_loss_rate": 0.1,
+      "mse": 0.0006798342801630497,
+      "psnr_db": 31.67596940208543,
+      "ssim": 0.9521829811227968
+    },
+    {
+      "image": "0878.png",
+      "loss_model": "independent",
+      "residual_loss_rate": 0.2,
+      "mse": 0.0037923024501651525,
+      "psnr_db": 24.21097033359363,
+      "ssim": 0.8379618628999892
+    },
+    {
+      "image": "0878.png",
+      "loss_model": "independent",
+      "residual_loss_rate": 0.3,
+      "mse": 0.005926161073148251,
+      "psnr_db": 22.272265485649122,
+      "ssim": 0.7856148521205579
+    },
+    {
+      "image": "0878.png",
+      "loss_model": "burst",
+      "residual_loss_rate": 0.05,
+      "mse": 0.0008077648235484958,
+      "psnr_db": 30.927150633613955,
+      "ssim": 0.9601979809781187
+    },
+    {
+      "image": "0878.png",
+      "loss_model": "burst",
+      "residual_loss_rate": 0.1,
+      "mse": 0.0016630480531603098,
+      "psnr_db": 27.790952018202564,
+      "ssim": 0.9350596713217524
+    },
+    {
+      "image": "0878.png",
+      "loss_model": "burst",
+      "residual_loss_rate": 0.2,
+      "mse": 0.007432524114847183,
+      "psnr_db": 21.288636730509666,
+      "ssim": 0.7932911182840793
+    },
+    {
+      "image": "0878.png",
+      "loss_model": "burst",
+      "residual_loss_rate": 0.3,
+      "mse": 0.006063716486096382,
+      "psnr_db": 22.172611126864126,
+      "ssim": 0.8040239850898478
+    },
+    {
+      "image": "0870.png",
+      "loss_model": "clean",
+      "residual_loss_rate": 0.0,
+      "mse": 0.00018028257181867957,
+      "psnr_db": 37.44046255134596,
+      "ssim": 0.9761602741919598
+    },
+    {
+      "image": "0870.png",
+      "loss_model": "independent",
+      "residual_loss_rate": 0.05,
+      "mse": 0.0007661118870601058,
+      "psnr_db": 31.157077990562794,
+      "ssim": 0.9476864798101293
+    },
+    {
+      "image": "0870.png",
+      "loss_model": "independent",
+      "residual_loss_rate": 0.1,
+      "mse": 0.0020838002674281597,
+      "psnr_db": 26.81143910569647,
+      "ssim": 0.8895680769811641
+    },
+    {
+      "image": "0870.png",
+      "loss_model": "independent",
+      "residual_loss_rate": 0.2,
+      "mse": 0.002848440781235695,
+      "psnr_db": 25.45392805047007,
+      "ssim": 0.8675922934885539
+    },
+    {
+      "image": "0870.png",
+      "loss_model": "independent",
+      "residual_loss_rate": 0.3,
+      "mse": 0.006989109329879284,
+      "psnr_db": 21.555781658515578,
+      "ssim": 0.7455575145729686
+    },
+    {
+      "image": "0870.png",
+      "loss_model": "burst",
+      "residual_loss_rate": 0.05,
+      "mse": 0.0002457653172314167,
+      "psnr_db": 36.094794054112675,
+      "ssim": 0.9700742939479922
+    },
+    {
+      "image": "0870.png",
+      "loss_model": "burst",
+      "residual_loss_rate": 0.1,
+      "mse": 0.0022215647622942924,
+      "psnr_db": 26.53341021834731,
+      "ssim": 0.9024737879667084
+    },
+    {
+      "image": "0870.png",
+      "loss_model": "burst",
+      "residual_loss_rate": 0.2,
+      "mse": 0.00018028257181867957,
+      "psnr_db": 37.44046255134596,
+      "ssim": 0.9761602741919598
+    },
+    {
+      "image": "0870.png",
+      "loss_model": "burst",
+      "residual_loss_rate": 0.3,
+      "mse": 0.010212059132754803,
+      "psnr_db": 19.90886679085692,
+      "ssim": 0.641129132803504
+    },
+    {
+      "image": "0803.png",
+      "loss_model": "clean",
+      "residual_loss_rate": 0.0,
+      "mse": 0.0002350853756070137,
+      "psnr_db": 36.28774386998941,
+      "ssim": 0.968486014809526
+    },
+    {
+      "image": "0803.png",
+      "loss_model": "independent",
+      "residual_loss_rate": 0.05,
+      "mse": 0.0006950559909455478,
+      "psnr_db": 31.57980208964938,
+      "ssim": 0.9511002747171681
+    },
+    {
+      "image": "0803.png",
+      "loss_model": "independent",
+      "residual_loss_rate": 0.1,
+      "mse": 0.0010903954971581697,
+      "psnr_db": 29.62415950610101,
+      "ssim": 0.9233197354076143
+    },
+    {
+      "image": "0803.png",
+      "loss_model": "independent",
+      "residual_loss_rate": 0.2,
+      "mse": 0.0024014837108552456,
+      "psnr_db": 26.195203548129324,
+      "ssim": 0.8626447287552037
+    },
+    {
+      "image": "0803.png",
+      "loss_model": "independent",
+      "residual_loss_rate": 0.3,
+      "mse": 0.0030083870515227318,
+      "psnr_db": 25.216662892483566,
+      "ssim": 0.8511646009724068
+    },
+    {
+      "image": "0803.png",
+      "loss_model": "burst",
+      "residual_loss_rate": 0.05,
+      "mse": 0.00036243139766156673,
+      "psnr_db": 34.40774186159392,
+      "ssim": 0.9630427819684176
+    },
+    {
+      "image": "0803.png",
+      "loss_model": "burst",
+      "residual_loss_rate": 0.1,
+      "mse": 0.005329221487045288,
+      "psnr_db": 22.733362297304392,
+      "ssim": 0.8177434498233144
+    },
+    {
+      "image": "0803.png",
+      "loss_model": "burst",
+      "residual_loss_rate": 0.2,
+      "mse": 0.003989267162978649,
+      "psnr_db": 23.991068778235007,
+      "ssim": 0.8298198244556106
+    },
+    {
+      "image": "0803.png",
+      "loss_model": "burst",
+      "residual_loss_rate": 0.3,
+      "mse": 0.005175517871975899,
+      "psnr_db": 22.860461873804773,
+      "ssim": 0.8164393029124396
+    },
+    {
+      "image": "0843.png",
+      "loss_model": "clean",
+      "residual_loss_rate": 0.0,
+      "mse": 0.00024857616517692804,
+      "psnr_db": 36.04540516194745,
+      "ssim": 0.9556771573833328
+    },
+    {
+      "image": "0843.png",
+      "loss_model": "independent",
+      "residual_loss_rate": 0.05,
+      "mse": 0.0010877614840865135,
+      "psnr_db": 29.634663229292244,
+      "ssim": 0.9379998917885383
+    },
+    {
+      "image": "0843.png",
+      "loss_model": "independent",
+      "residual_loss_rate": 0.1,
+      "mse": 0.0018307920545339584,
+      "psnr_db": 27.37360981038023,
+      "ssim": 0.9122772544145924
+    },
+    {
+      "image": "0843.png",
+      "loss_model": "independent",
+      "residual_loss_rate": 0.2,
+      "mse": 0.0014180110301822424,
+      "psnr_db": 28.48320390924002,
+      "ssim": 0.910431802428539
+    },
+    {
+      "image": "0843.png",
+      "loss_model": "independent",
+      "residual_loss_rate": 0.3,
+      "mse": 0.006913907825946808,
+      "psnr_db": 21.602764146329978,
+      "ssim": 0.8110745523162951
+    },
+    {
+      "image": "0843.png",
+      "loss_model": "burst",
+      "residual_loss_rate": 0.05,
+      "mse": 0.002145798411220312,
+      "psnr_db": 26.684110806025604,
+      "ssim": 0.9179134905415346
+    },
+    {
+      "image": "0843.png",
+      "loss_model": "burst",
+      "residual_loss_rate": 0.1,
+      "mse": 0.001532259164378047,
+      "psnr_db": 28.146677724709328,
+      "ssim": 0.9190280287086309
+    },
+    {
+      "image": "0843.png",
+      "loss_model": "burst",
+      "residual_loss_rate": 0.2,
+      "mse": 0.0036580334417521954,
+      "psnr_db": 24.36752328520057,
+      "ssim": 0.8678522261483105
+    },
+    {
+      "image": "0843.png",
+      "loss_model": "burst",
+      "residual_loss_rate": 0.3,
+      "mse": 0.007018787320703268,
+      "psnr_db": 21.537379171325046,
+      "ssim": 0.8145232511097272
+    },
+    {
+      "image": "0893.png",
+      "loss_model": "clean",
+      "residual_loss_rate": 0.0,
+      "mse": 0.0001484203094150871,
+      "psnr_db": 38.28506667362886,
+      "ssim": 0.9059850248606297
+    },
+    {
+      "image": "0893.png",
+      "loss_model": "independent",
+      "residual_loss_rate": 0.05,
+      "mse": 0.00021151748660486192,
+      "psnr_db": 36.746537227472366,
+      "ssim": 0.8877608950407166
+    },
+    {
+      "image": "0893.png",
+      "loss_model": "independent",
+      "residual_loss_rate": 0.1,
+      "mse": 0.00023547459568362683,
+      "psnr_db": 36.28055940125507,
+      "ssim": 0.8680893744796531
+    },
+    {
+      "image": "0893.png",
+      "loss_model": "independent",
+      "residual_loss_rate": 0.2,
+      "mse": 0.0002967460313811898,
+      "psnr_db": 35.27615080497298,
+      "ssim": 0.8526471335454341
+    },
+    {
+      "image": "0893.png",
+      "loss_model": "independent",
+      "residual_loss_rate": 0.3,
+      "mse": 0.001189864706248045,
+      "psnr_db": 29.245024173219978,
+      "ssim": 0.8230580644644593
+    },
+    {
+      "image": "0893.png",
+      "loss_model": "burst",
+      "residual_loss_rate": 0.05,
+      "mse": 0.001583937439136207,
+      "psnr_db": 28.002619757607206,
+      "ssim": 0.8562758539259668
+    },
+    {
+      "image": "0893.png",
+      "loss_model": "burst",
+      "residual_loss_rate": 0.1,
+      "mse": 0.0001515929470770061,
+      "psnr_db": 38.19321003959843,
+      "ssim": 0.9004645396144538
+    },
+    {
+      "image": "0893.png",
+      "loss_model": "burst",
+      "residual_loss_rate": 0.2,
+      "mse": 0.0002321364445379004,
+      "psnr_db": 36.34256671611298,
+      "ssim": 0.878012525861617
+    },
+    {
+      "image": "0893.png",
+      "loss_model": "burst",
+      "residual_loss_rate": 0.3,
+      "mse": 0.00023136431991588324,
+      "psnr_db": 36.35703615386102,
+      "ssim": 0.8791241861406495
+    },
+    {
+      "image": "0822.png",
+      "loss_model": "clean",
+      "residual_loss_rate": 0.0,
+      "mse": 0.00035074245533905923,
+      "psnr_db": 34.55011662109595,
+      "ssim": 0.9466734292784965
+    },
+    {
+      "image": "0822.png",
+      "loss_model": "independent",
+      "residual_loss_rate": 0.05,
+      "mse": 0.0009329013410024345,
+      "psnr_db": 30.30164282645567,
+      "ssim": 0.8909934965815142
+    },
+    {
+      "image": "0822.png",
+      "loss_model": "independent",
+      "residual_loss_rate": 0.1,
+      "mse": 0.001387529424391687,
+      "psnr_db": 28.5775779832028,
+      "ssim": 0.8834059393265813
+    },
+    {
+      "image": "0822.png",
+      "loss_model": "independent",
+      "residual_loss_rate": 0.2,
+      "mse": 0.0039140889421105385,
+      "psnr_db": 24.07369309840782,
+      "ssim": 0.7760003661040095
+    },
+    {
+      "image": "0822.png",
+      "loss_model": "independent",
+      "residual_loss_rate": 0.3,
+      "mse": 0.004188896622508764,
+      "psnr_db": 23.77900357430136,
+      "ssim": 0.7896530472975556
+    },
+    {
+      "image": "0822.png",
+      "loss_model": "burst",
+      "residual_loss_rate": 0.05,
+      "mse": 0.0009378492250107229,
+      "psnr_db": 30.278669761296072,
+      "ssim": 0.9143207015565503
+    },
+    {
+      "image": "0822.png",
+      "loss_model": "burst",
+      "residual_loss_rate": 0.1,
+      "mse": 0.0005119778215885162,
+      "psnr_db": 32.907488518568755,
+      "ssim": 0.928020270693584
+    },
+    {
+      "image": "0822.png",
+      "loss_model": "burst",
+      "residual_loss_rate": 0.2,
+      "mse": 0.006233084946870804,
+      "psnr_db": 22.052969543360046,
+      "ssim": 0.7077787584873318
+    },
+    {
+      "image": "0822.png",
+      "loss_model": "burst",
+      "residual_loss_rate": 0.3,
+      "mse": 0.0045424881391227245,
+      "psnr_db": 23.427061980034782,
+      "ssim": 0.7744842608878678
+    },
+    {
+      "image": "0809.png",
+      "loss_model": "clean",
+      "residual_loss_rate": 0.0,
+      "mse": 8.050701580941677e-05,
+      "psnr_db": 40.94166271252639,
+      "ssim": 0.9881704689612177
+    },
+    {
+      "image": "0809.png",
+      "loss_model": "independent",
+      "residual_loss_rate": 0.05,
+      "mse": 0.0007786332862451673,
+      "psnr_db": 31.086670343147485,
+      "ssim": 0.9393073306619767
+    },
+    {
+      "image": "0809.png",
+      "loss_model": "independent",
+      "residual_loss_rate": 0.1,
+      "mse": 0.0011927817249670625,
+      "psnr_db": 29.23439023484272,
+      "ssim": 0.9187504137430814
+    },
+    {
+      "image": "0809.png",
+      "loss_model": "independent",
+      "residual_loss_rate": 0.2,
+      "mse": 0.0016200251411646605,
+      "psnr_db": 27.90478245590482,
+      "ssim": 0.8639503400180489
+    },
+    {
+      "image": "0809.png",
+      "loss_model": "independent",
+      "residual_loss_rate": 0.3,
+      "mse": 0.005914078559726477,
+      "psnr_db": 22.2811291081614,
+      "ssim": 0.7885049686685836
+    },
+    {
+      "image": "0809.png",
+      "loss_model": "burst",
+      "residual_loss_rate": 0.05,
+      "mse": 8.050701580941677e-05,
+      "psnr_db": 40.94166271252639,
+      "ssim": 0.9881704689612177
+    },
+    {
+      "image": "0809.png",
+      "loss_model": "burst",
+      "residual_loss_rate": 0.1,
+      "mse": 0.0035422234795987606,
+      "psnr_db": 24.507240425545113,
+      "ssim": 0.8762712001821606
+    },
+    {
+      "image": "0809.png",
+      "loss_model": "burst",
+      "residual_loss_rate": 0.2,
+      "mse": 0.001973344711586833,
+      "psnr_db": 27.047970438590085,
+      "ssim": 0.8617150097703569
+    },
+    {
+      "image": "0809.png",
+      "loss_model": "burst",
+      "residual_loss_rate": 0.3,
+      "mse": 0.015025860629975796,
+      "psnr_db": 18.23160643708238,
+      "ssim": 0.6462959826927163
+    },
+    {
+      "image": "0864.png",
+      "loss_model": "clean",
+      "residual_loss_rate": 0.0,
+      "mse": 0.0001252401852980256,
+      "psnr_db": 39.02256298498028,
+      "ssim": 0.9672520570409456
+    },
+    {
+      "image": "0864.png",
+      "loss_model": "independent",
+      "residual_loss_rate": 0.05,
+      "mse": 0.0002609131333883852,
+      "psnr_db": 35.83504059594493,
+      "ssim": 0.9532087991800671
+    },
+    {
+      "image": "0864.png",
+      "loss_model": "independent",
+      "residual_loss_rate": 0.1,
+      "mse": 0.0008314255392178893,
+      "psnr_db": 30.801766392343648,
+      "ssim": 0.880598203157542
+    },
+    {
+      "image": "0864.png",
+      "loss_model": "independent",
+      "residual_loss_rate": 0.2,
+      "mse": 0.0017748473910614848,
+      "psnr_db": 27.508389834929453,
+      "ssim": 0.8261990440083412
+    },
+    {
+      "image": "0864.png",
+      "loss_model": "independent",
+      "residual_loss_rate": 0.3,
+      "mse": 0.0025291726924479008,
+      "psnr_db": 25.970215159238258,
+      "ssim": 0.7751680368142329
+    },
+    {
+      "image": "0864.png",
+      "loss_model": "burst",
+      "residual_loss_rate": 0.05,
+      "mse": 0.00015784951392561197,
+      "psnr_db": 38.01756751115758,
+      "ssim": 0.9629706171152752
+    },
+    {
+      "image": "0864.png",
+      "loss_model": "burst",
+      "residual_loss_rate": 0.1,
+      "mse": 0.0061015053652226925,
+      "psnr_db": 22.14563002505062,
+      "ssim": 0.6814231238081757
+    },
+    {
+      "image": "0864.png",
+      "loss_model": "burst",
+      "residual_loss_rate": 0.2,
+      "mse": 0.0027583043556660414,
+      "psnr_db": 25.593578147759935,
+      "ssim": 0.7655570360401004
+    },
+    {
+      "image": "0864.png",
+      "loss_model": "burst",
+      "residual_loss_rate": 0.3,
+      "mse": 0.0015041095903143287,
+      "psnr_db": 28.227205196387516,
+      "ssim": 0.8419059812882422
+    }
+  ]
+}

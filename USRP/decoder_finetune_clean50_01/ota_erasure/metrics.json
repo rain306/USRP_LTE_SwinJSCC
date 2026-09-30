@@ -1,0 +1,522 @@
+{
+  "count": 24,
+  "n_with_ref": 24,
+  "n_finite_psnr": 24,
+  "n_finite_ssim": 24,
+  "mean_psnr_db": 29.619868344249017,
+  "mean_ssim": 0.8975729494739403,
+  "model": "SwinJSCC_w/o_SAandRA",
+  "checkpoint": "/mnt/g/pythonProject/JSCC/02_SwinJSCC/weights/SwinJSCC_wo_SAandRA_AWGN_HRimage_snr10_psnr_C96.model",
+  "decoder_checkpoint": "/mnt/g/pythonProject/JSCC/02_SwinJSCC/USRP/decoder_finetune_clean50_01/best.model",
+  "C": 96,
+  "snr_db": 10,
+  "npy_dir": "/mnt/g/pythonProject/JSCC/02_SwinJSCC/USRP/npy_out_erasure",
+  "out_dir": "/mnt/g/pythonProject/JSCC/02_SwinJSCC/USRP/decoder_finetune_clean50_01/ota_erasure",
+  "ref_dir": "/mnt/g/pythonProject/JSCC/02_SwinJSCC/datasets/Kodak24",
+  "per_image": [
+    {
+      "npy": "Kodak24_01.npy",
+      "recon_png": "Kodak24_01.png",
+      "num_complex_symbols": 73728,
+      "feature_shape": [
+        1,
+        1536,
+        96
+      ],
+      "input_hw": [
+        512,
+        768
+      ],
+      "restore_power": true,
+      "orig_power": 11.319761276245117,
+      "meta_file": "Kodak24_01.npy#embedded",
+      "ref_image": "01.png",
+      "psnr_db": 25.14441694600435,
+      "mse": 198.90177842601233,
+      "ssim": 0.8035852555813311
+    },
+    {
+      "npy": "Kodak24_02.npy",
+      "recon_png": "Kodak24_02.png",
+      "num_complex_symbols": 73728,
+      "feature_shape": [
+        1,
+        1536,
+        96
+      ],
+      "input_hw": [
+        512,
+        768
+      ],
+      "restore_power": true,
+      "orig_power": 5.299543857574463,
+      "meta_file": "Kodak24_02.npy#embedded",
+      "ref_image": "02.png",
+      "psnr_db": 32.650576484333065,
+      "mse": 35.32016408058436,
+      "ssim": 0.9008767289207317
+    },
+    {
+      "npy": "Kodak24_03.npy",
+      "recon_png": "Kodak24_03.png",
+      "num_complex_symbols": 73728,
+      "feature_shape": [
+        1,
+        1536,
+        96
+      ],
+      "input_hw": [
+        512,
+        768
+      ],
+      "restore_power": true,
+      "orig_power": 4.068663120269775,
+      "meta_file": "Kodak24_03.meta.json",
+      "ref_image": "03.png",
+      "psnr_db": 30.47477366866771,
+      "mse": 58.29119974151118,
+      "ssim": 0.9237344662836936
+    },
+    {
+      "npy": "Kodak24_05.npy",
+      "recon_png": "Kodak24_05.png",
+      "num_complex_symbols": 73728,
+      "feature_shape": [
+        1,
+        1536,
+        96
+      ],
+      "input_hw": [
+        512,
+        768
+      ],
+      "restore_power": true,
+      "orig_power": 13.581520080566406,
+      "meta_file": "Kodak24_05.meta.json",
+      "ref_image": "05.png",
+      "psnr_db": 23.44021396538499,
+      "mse": 294.48214261996657,
+      "ssim": 0.8171225386950312
+    },
+    {
+      "npy": "Kodak24_06.npy",
+      "recon_png": "Kodak24_06.png",
+      "num_complex_symbols": 73728,
+      "feature_shape": [
+        1,
+        1536,
+        96
+      ],
+      "input_hw": [
+        512,
+        768
+      ],
+      "restore_power": true,
+      "orig_power": 8.713637351989746,
+      "meta_file": "Kodak24_06.meta.json",
+      "ref_image": "06.png",
+      "psnr_db": 28.415629804208212,
+      "mse": 93.65206986637462,
+      "ssim": 0.8922730789645592
+    },
+    {
+      "npy": "Kodak24_07.npy",
+      "recon_png": "Kodak24_07.png",
+      "num_complex_symbols": 73728,
+      "feature_shape": [
+        1,
+        1536,
+        96
+      ],
+      "input_hw": [
+        512,
+        768
+      ],
+      "restore_power": true,
+      "orig_power": 5.5271806716918945,
+      "meta_file": "Kodak24_07.npy#embedded",
+      "ref_image": "07.png",
+      "psnr_db": 29.564550722583203,
+      "mse": 71.88285016412118,
+      "ssim": 0.931050214654372
+    },
+    {
+      "npy": "Kodak24_08.npy",
+      "recon_png": "Kodak24_08.png",
+      "num_complex_symbols": 73728,
+      "feature_shape": [
+        1,
+        1536,
+        96
+      ],
+      "input_hw": [
+        512,
+        768
+      ],
+      "restore_power": true,
+      "orig_power": 14.173993110656738,
+      "meta_file": "Kodak24_08.npy#embedded",
+      "ref_image": "08.png",
+      "psnr_db": 23.901864393406637,
+      "mse": 264.7853308972087,
+      "ssim": 0.8529675112142255
+    },
+    {
+      "npy": "Kodak24_11.npy",
+      "recon_png": "Kodak24_11.png",
+      "num_complex_symbols": 73728,
+      "feature_shape": [
+        1,
+        1536,
+        96
+      ],
+      "input_hw": [
+        512,
+        768
+      ],
+      "restore_power": true,
+      "orig_power": 7.499584674835205,
+      "meta_file": "Kodak24_11.npy#embedded",
+      "ref_image": "11.png",
+      "psnr_db": 31.71680319415731,
+      "mse": 43.79253053406549,
+      "ssim": 0.9246962893218645
+    },
+    {
+      "npy": "Kodak24_12.npy",
+      "recon_png": "Kodak24_12.png",
+      "num_complex_symbols": 73728,
+      "feature_shape": [
+        1,
+        1536,
+        96
+      ],
+      "input_hw": [
+        512,
+        768
+      ],
+      "restore_power": true,
+      "orig_power": 4.4649553298950195,
+      "meta_file": "Kodak24_12.npy#embedded",
+      "ref_image": "12.png",
+      "psnr_db": 33.847757372440526,
+      "mse": 26.81048211148404,
+      "ssim": 0.9323713436301527
+    },
+    {
+      "npy": "Kodak24_13.npy",
+      "recon_png": "Kodak24_13.png",
+      "num_complex_symbols": 73728,
+      "feature_shape": [
+        1,
+        1536,
+        96
+      ],
+      "input_hw": [
+        512,
+        768
+      ],
+      "restore_power": true,
+      "orig_power": 16.401037216186523,
+      "meta_file": "Kodak24_13.npy#embedded",
+      "ref_image": "13.png",
+      "psnr_db": 26.23975899716031,
+      "mse": 154.5626165360647,
+      "ssim": 0.8714073130270883
+    },
+    {
+      "npy": "Kodak24_14.npy",
+      "recon_png": "Kodak24_14.png",
+      "num_complex_symbols": 73728,
+      "feature_shape": [
+        1,
+        1536,
+        96
+      ],
+      "input_hw": [
+        512,
+        768
+      ],
+      "restore_power": true,
+      "orig_power": 10.117201805114746,
+      "meta_file": "Kodak24_14.npy#embedded",
+      "ref_image": "14.png",
+      "psnr_db": 28.784110921124206,
+      "mse": 86.03383233272713,
+      "ssim": 0.9013801399199469
+    },
+    {
+      "npy": "Kodak24_15.npy",
+      "recon_png": "Kodak24_15.png",
+      "num_complex_symbols": 73728,
+      "feature_shape": [
+        1,
+        1536,
+        96
+      ],
+      "input_hw": [
+        512,
+        768
+      ],
+      "restore_power": true,
+      "orig_power": 5.096716403961182,
+      "meta_file": "Kodak24_15.meta.json",
+      "ref_image": "15.png",
+      "psnr_db": 30.497779526717427,
+      "mse": 57.983230507123835,
+      "ssim": 0.9100313859153343
+    },
+    {
+      "npy": "Kodak24_16.npy",
+      "recon_png": "Kodak24_16.png",
+      "num_complex_symbols": 73728,
+      "feature_shape": [
+        1,
+        1536,
+        96
+      ],
+      "input_hw": [
+        512,
+        768
+      ],
+      "restore_power": true,
+      "orig_power": 5.409907341003418,
+      "meta_file": "Kodak24_16.meta.json",
+      "ref_image": "16.png",
+      "psnr_db": 31.21075998301955,
+      "mse": 49.20444783316519,
+      "ssim": 0.8989696812497979
+    },
+    {
+      "npy": "Kodak24_20.npy",
+      "recon_png": "Kodak24_20.png",
+      "num_complex_symbols": 73728,
+      "feature_shape": [
+        1,
+        1536,
+        96
+      ],
+      "input_hw": [
+        512,
+        768
+      ],
+      "restore_power": true,
+      "orig_power": 4.734726905822754,
+      "meta_file": "Kodak24_20.npy#embedded",
+      "ref_image": "20.png",
+      "psnr_db": 32.17921802198559,
+      "mse": 39.36937847852182,
+      "ssim": 0.9275501951043207
+    },
+    {
+      "npy": "Kodak24_21.npy",
+      "recon_png": "Kodak24_21.png",
+      "num_complex_symbols": 73728,
+      "feature_shape": [
+        1,
+        1536,
+        96
+      ],
+      "input_hw": [
+        512,
+        768
+      ],
+      "restore_power": true,
+      "orig_power": 8.028670310974121,
+      "meta_file": "Kodak24_21.meta.json",
+      "ref_image": "21.png",
+      "psnr_db": 31.16037362542461,
+      "mse": 49.77863670250245,
+      "ssim": 0.9278361335831233
+    },
+    {
+      "npy": "Kodak24_22.npy",
+      "recon_png": "Kodak24_22.png",
+      "num_complex_symbols": 73728,
+      "feature_shape": [
+        1,
+        1536,
+        96
+      ],
+      "input_hw": [
+        512,
+        768
+      ],
+      "restore_power": true,
+      "orig_power": 7.175520420074463,
+      "meta_file": "Kodak24_22.npy#embedded",
+      "ref_image": "22.png",
+      "psnr_db": 29.88132439415228,
+      "mse": 66.82637777212055,
+      "ssim": 0.869408063808376
+    },
+    {
+      "npy": "Kodak24_23.npy",
+      "recon_png": "Kodak24_23.png",
+      "num_complex_symbols": 73728,
+      "feature_shape": [
+        1,
+        1536,
+        96
+      ],
+      "input_hw": [
+        512,
+        768
+      ],
+      "restore_power": true,
+      "orig_power": 4.168535232543945,
+      "meta_file": "Kodak24_23.npy#embedded",
+      "ref_image": "23.png",
+      "psnr_db": 31.540529023479777,
+      "mse": 45.60657500607204,
+      "ssim": 0.9377292088023045
+    },
+    {
+      "npy": "Kodak24_24.npy",
+      "recon_png": "Kodak24_24.png",
+      "num_complex_symbols": 73728,
+      "feature_shape": [
+        1,
+        1536,
+        96
+      ],
+      "input_hw": [
+        512,
+        768
+      ],
+      "restore_power": true,
+      "orig_power": 10.010014533996582,
+      "meta_file": "Kodak24_24.npy#embedded",
+      "ref_image": "24.png",
+      "psnr_db": 28.327991858734762,
+      "mse": 95.56110764441556,
+      "ssim": 0.9045010133589263
+    },
+    {
+      "npy": "Kodak24_04.npy",
+      "recon_png": "Kodak24_04.png",
+      "num_complex_symbols": 73728,
+      "feature_shape": [
+        1,
+        1536,
+        96
+      ],
+      "input_hw": [
+        768,
+        512
+      ],
+      "restore_power": true,
+      "orig_power": 5.4302568435668945,
+      "meta_file": "Kodak24_04.npy#embedded",
+      "ref_image": "04.png",
+      "psnr_db": 33.11186007981267,
+      "mse": 31.761013535885873,
+      "ssim": 0.9261336235279055
+    },
+    {
+      "npy": "Kodak24_09.npy",
+      "recon_png": "Kodak24_09.png",
+      "num_complex_symbols": 73728,
+      "feature_shape": [
+        1,
+        1536,
+        96
+      ],
+      "input_hw": [
+        768,
+        512
+      ],
+      "restore_power": true,
+      "orig_power": 4.593104362487793,
+      "meta_file": "Kodak24_09.meta.json",
+      "ref_image": "09.png",
+      "psnr_db": 29.438322231295476,
+      "mse": 74.00279753844933,
+      "ssim": 0.9010237835110857
+    },
+    {
+      "npy": "Kodak24_10.npy",
+      "recon_png": "Kodak24_10.png",
+      "num_complex_symbols": 73728,
+      "feature_shape": [
+        1,
+        1536,
+        96
+      ],
+      "input_hw": [
+        768,
+        512
+      ],
+      "restore_power": true,
+      "orig_power": 4.888409614562988,
+      "meta_file": "Kodak24_10.npy#embedded",
+      "ref_image": "10.png",
+      "psnr_db": 30.607387721016597,
+      "mse": 56.53814935516168,
+      "ssim": 0.9154909615567667
+    },
+    {
+      "npy": "Kodak24_17.npy",
+      "recon_png": "Kodak24_17.png",
+      "num_complex_symbols": 73728,
+      "feature_shape": [
+        1,
+        1536,
+        96
+      ],
+      "input_hw": [
+        768,
+        512
+      ],
+      "restore_power": true,
+      "orig_power": 5.282614707946777,
+      "meta_file": "Kodak24_17.npy#embedded",
+      "ref_image": "17.png",
+      "psnr_db": 32.25183799746755,
+      "mse": 38.716542011039174,
+      "ssim": 0.937429201145922
+    },
+    {
+      "npy": "Kodak24_18.npy",
+      "recon_png": "Kodak24_18.png",
+      "num_complex_symbols": 73728,
+      "feature_shape": [
+        1,
+        1536,
+        96
+      ],
+      "input_hw": [
+        768,
+        512
+      ],
+      "restore_power": true,
+      "orig_power": 10.033961296081543,
+      "meta_file": "Kodak24_18.meta.json",
+      "ref_image": "18.png",
+      "psnr_db": 27.259659413809317,
+      "mse": 122.21215986497984,
+      "ssim": 0.8479691217355342
+    },
+    {
+      "npy": "Kodak24_19.npy",
+      "recon_png": "Kodak24_19.png",
+      "num_complex_symbols": 73728,
+      "feature_shape": [
+        1,
+        1536,
+        96
+      ],
+      "input_hw": [
+        768,
+        512
+      ],
+      "restore_power": true,
+      "orig_power": 6.548796653747559,
+      "meta_file": "Kodak24_19.meta.json",
+      "ref_image": "19.png",
+      "psnr_db": 29.229339915590323,
+      "mse": 77.65087775689167,
+      "ssim": 0.8862135338621716
+    }
+  ]
+}

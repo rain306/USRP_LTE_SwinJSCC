@@ -1,0 +1,106 @@
+# ① 批量编码（主机端）
+python -B USRP/core_codec/encode_dataset.py --data-dir datasets/Kodak24 --out-dir USRP/npy_in --checkpoint weights/SwinJSCC_wo_SAandRA_AWGN_HRimage_snr10_psnr_C96.model --model SwinJSCC_w/o_SAandRA --C 96 --snr 10 --embed-meta
+（指定Kodak24数据集，输出目录，预训练模型，模型名，码率，信噪比，把元数据添加到npy尾部而非单独文件）
+python -B -u USRP/core_codec/encode_dataset.py \
+  --data-dir datasets/CLIC2022_Test \
+  --out-dir USRP/hd_energy/npy_in \
+  --checkpoint weights/SwinJSCC_wo_SAandRA_AWGN_HRimage_snr10_psnr_C96.model \
+  --model SwinJSCC_w/o_SAandRA --C 96 --snr 10 \
+  --storage int8 --embed-meta
+（指定CLIC数据集，--storage int8指定int8精度）
+
+
+
+#生成擦除重要性
+python -B USRP/erasure_training/measure_erasure_importance.py --npy-dir USRP/npy_in --ref-dir datasets/Kodak24 --checkpoint weights/SwinJSCC_wo_SAandRA_AWGN_HRimage_snr10_psnr_C96.model --model SwinJSCC_w/o_SAandRA --C 96 --snr 10 --chunk 1200 --erasure-fill 0
+（npy存放目录，原图存放目录，预训练模型，模型名，码率，信噪比，块大小，指定填充字符）
+
+python -B -u USRP/erasure_training/measure_erasure_importance.py \
+  --npy-dir USRP/hd_energy/npy_in \
+  --ref-dir datasets/CLIC2022_Test \
+  --checkpoint weights/SwinJSCC_wo_SAandRA_AWGN_HRimage_snr10_psnr_C96.model \
+  --decoder-checkpoint USRP/decoder_finetune_clean50_01/best.model \
+  --model SwinJSCC_w/o_SAandRA --C 96 --snr 10 \
+  --chunk 1200 --device cuda --progress-every 25
+（对CLIC数据集的逐块擦除）
+
+
+上述输出字节流npy文件，元数据meta.json，擦除重要性数据erasure.json（能量排序则无擦除重要性数据）
+
+# ② 持续收发（USRP 板载；chunk 与 port 两端必须一致）
+# 接收端
+python -u C:\Users\NI\Desktop\udp\receive_raw.py --out-dir C:\Users\NI\Desktop\npy_out --port 60000 --chunk 1200 --erasure-fill 0 --quiet 5 --status-interval 1 2>&1 | Tee-Object -FilePath C:\Users\NI\Desktop\log.txt
+（接收目录，接收端口，块大小，填充字符，静默时间(s),输出日志刷新时间(s)，并输出为Log.txt文件）
+（接收到npy，meta.json和统计报告recv.json文件）
+
+python -u C:\Users\NI\Desktop\udp\receive_raw.py --out-dir C:\Users\NI\Desktop\npy_out_hd_energy --port 60000 --chunk 1200 --quiet 5 --status-interval 1 2>&1 | Tee-Object -FilePath C:\Users\NI\Desktop\udp\log_hd_energy.txt
+（对CLIC数据集接收）
+
+# 发送端：
+python -u C:\Users\NI\Desktop\udp\send_raw.py --dir C:\Users\NI\Desktop\npy_in --host 127.0.0.1 --port 50000 --chunk 1200 --gap 0.01 --mode semantic --importance erasure --channel-profile medium --top-frac 0.10 --mid-frac 0.10 --meta-rep 3 --meta-every 180 --meta-max 1400 --warmup 2 --once
+（数据目录，主机ip，发送端口，块大小，块发送间隔(s)，启用分层发送模式(baseline不排序)，重要性排序模式(erasure/energy),信道质量选择(medium是A发2次，其余1次)，A,B层占比(重要性分层,A>B>C),meta冗余(每个文件开头先发3个HELLO和3个META)，同步（每发送180个data块发送一次HELLO/META同步），上限(meta.json最大允许字节，超出报错)，预热时间(直接传输发现信道很差，故先发空包预热），发完即退）
+
+python -u C:\Users\NI\Desktop\udp\send_raw.py --dir C:\Users\NI\Desktop\npy_in_hd_energy --host 127.0.0.1 --port 50000 --chunk 1200 --gap 0.01 --mode semantic --importance energy --energy-dtype int --channel-profile medium --top-frac 0.10 --mid-frac 0.10 --meta-rep 3 --meta-every 128 --meta-max 1400 --warmup 2 --once
+（对CLIC数据集发送，其中--energy-dtype int主要用于校验是否为int8的npy文件）
+
+
+# 一次性解码接收到的全部 npy
+python -B USRP/core_codec/decode_dataset.py --npy-dir USRP/npy_out --out-dir USRP/recon_main02 --checkpoint weights/SwinJSCC_wo_SAandRA_AWGN_HRimage_snr10_psnr_C96.model --decoder-checkpoint USRP/decoder_finetune_clean50_01/best.model --model SwinJSCC_w/o_SAandRA --C 96 --snr 10 --ref-dir datasets/Kodak24 --ssim --metrics-json USRP/recon_main02/metrics.json
+(npy目录(包含meta.json文件)，输出目录，JSCC模型参数目录，擦除解码器模型目录，对应JSCC模型名，码率，信噪比，原图目录，启用ssim计算，指定日志metrics-json的存放目录）
+
+python -B -u USRP/core_codec/decode_dataset.py \
+  --npy-dir USRP/hd_energy/npy_out \
+  --out-dir USRP/hd_energy/ota_eval \
+  --checkpoint weights/SwinJSCC_wo_SAandRA_AWGN_HRimage_snr10_psnr_C96.model \
+  --decoder-checkpoint USRP/decoder_finetune_clean50_01/best.model \
+  --model SwinJSCC_w/o_SAandRA --C 96 --snr 10 \
+  --ref-dir datasets/CLIC2022_Test --ssim \
+  --metrics-json USRP/hd_energy/ota_eval/metrics.json \
+（对CLIC数据集的解码）
+
+#基线测试
+python main.py --testset CLIC2022 \
+  --model SwinJSCC_w/o_SAandRA --channel-type awgn \
+  --C 96 --multiple-snr 25 \
+  --checkpoint weights/SwinJSCC_wo_SAandRA_AWGN_HRimage_snr10_psnr_C96.model
+
+python main.py --testset kodak \
+  --model SwinJSCC_w/o_SAandRA --channel-type awgn \
+  --C 96 --multiple-snr 25 \
+  --checkpoint weights/SwinJSCC_wo_SAandRA_AWGN_HRimage_snr10_psnr_C96.model
+
+擦除解码器训练：
+python -B USRP/erasure_training/train_erasure_decoder.py --data-dir datasets/DIV2K_valid --test-dir datasets/Kodak24 --out-dir USRP/decoder_finetune_clean50 --checkpoint weights/SwinJSCC_wo_SAandRA_AWGN_HRimage_snr10_psnr_C96.model --C 96 --snr 10 --epochs 5 --crop 256 --chunk 1200 --lr 1e-5 --clean-weight 0.50 --loss-rates 0.05,0.1,0.2,0.3 --burst-length 5 --val-count 10 --seed 2026 --erasure-fill 0
+（其冻结编码器，只训练解码器，--clean-weight 0.50指定完整输入与擦除输入权重，越小越擦除），--loss-rates训练模拟的残余擦除比例，末尾加上--resume可续点训练）
+
+擦除预测器训练：
+python -B -u USRP/predictor/train_erasure_predictor.py \
+  --npy-dir USRP/hd_energy/npy_in_erasure \
+  --out-dir USRP/hd_predictor_01 \
+  --expected-images 30 --heldout-count 6 \
+  --chunk 1200 --top-frac 0.10 --alpha 0.05 --seed 2026
+
+python -B -u USRP/predictor/score_erasure_predictor.py \
+  --npy-dir USRP/hd_energy/npy_in_erasure \
+  --model USRP/hd_predictor_01/model.json \
+  --out-dir USRP/hd_predictor_01/tx_heldout \
+  --split heldout
+
+python -B -u USRP/predictor/evaluate_erasure_predictor.py \
+  --npy-dir USRP/hd_predictor_01/tx_heldout \
+  --ref-dir datasets/CLIC2022_Test \
+  --out-dir USRP/hd_predictor_01/offline_smoke \
+  --checkpoint weights/SwinJSCC_wo_SAandRA_AWGN_HRimage_snr10_psnr_C96.model \
+  --decoder-checkpoint USRP/decoder_finetune_clean50_01/best.model \
+  --chunk 1200 --top-frac 0.10 \
+  --loss-rates 0.10 --trials 1 --limit 1 --device cuda
+
+python -B -u USRP/predictor/evaluate_erasure_predictor.py \
+  --npy-dir USRP/hd_predictor_01/tx_heldout \
+  --ref-dir datasets/CLIC2022_Test \
+  --out-dir USRP/hd_predictor_01/offline_eval \
+  --checkpoint weights/SwinJSCC_wo_SAandRA_AWGN_HRimage_snr10_psnr_C96.model \
+  --decoder-checkpoint USRP/decoder_finetune_clean50_01/best.model \
+  --chunk 1200 --top-frac 0.10 \
+  --loss-rates 0.05,0.10 --trials 3 --seed 2026 --device cuda
+
